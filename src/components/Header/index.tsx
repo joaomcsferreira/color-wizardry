@@ -12,12 +12,16 @@ import styles from "./index.css"
 
 const menuItems = [
   { id: 1, name: "Palettes", link: "/" },
-  { id: 2, name: "Contact", link: "/" },
-  { id: 3, name: "Info", link: "/" },
+  { id: 2, name: "Contact", link: "/contact" },
+  { id: 3, name: "Info", link: "/info" },
 ]
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = React.useState(false)
+
+  const handleClick = () => {
+    if (menuOpen) setMenuOpen((menuOpen) => !menuOpen)
+  }
 
   return (
     <>
@@ -37,7 +41,11 @@ const Header = () => {
         <nav className={`${styles.menu} ${menuOpen ? "flex" : "hidden"}`}>
           <ul className={styles.menuItem}>
             {menuItems.map((menuItem) => (
-              <Link key={menuItem.id} href={menuItem.link}>
+              <Link
+                key={menuItem.id}
+                href={menuItem.link}
+                onClick={() => handleClick()}
+              >
                 <li className={styles.menuItemName}>{menuItem.name}</li>
               </Link>
             ))}

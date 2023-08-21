@@ -7,7 +7,7 @@ import complementary from "../../../public/images/complementary.png"
 import triadic from "../../../public/images/primary.png"
 import splitComplementary from "../../../public/images/split-complementary.png"
 
-import styles from "./inde.css"
+import styles from "./index.css"
 
 const theories = [
   {
