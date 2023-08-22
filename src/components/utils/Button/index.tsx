@@ -5,13 +5,19 @@ interface ButtonProps {
   children: React.ReactNode
   large?: boolean
   link?: string
+  href?: string
+  onClick?: () => void
 }
 
-const Button = ({ children, large, link }: ButtonProps) => {
+const Button = ({ children, large, link, href, onClick }: ButtonProps) => {
   const button = (
-    <button className={`${styles.container} ${large && "w-full"}`}>
+    <a
+      onClick={onClick}
+      href={href}
+      className={`${styles.container} ${large && "w-[80%]"}`}
+    >
       {children}
-    </button>
+    </a>
   )
 
   if (link)

@@ -9,7 +9,9 @@ const styles = {
   paletteName: "font-black text-2xl",
   paletteColors: "flex flex-col gap-2 md:flex-row md:gap-1",
   color:
-    "w-[90vw] p-4 rounded-2xl flex items-center justify-center md:w-[10vw] md:h-[10vw]",
+    "w-[90vw] p-4 rounded-2xl flex items-center justify-center md:w-[10vw] md:h-[10vw] min-w-min",
+  colorCod:
+    "py-2 px-1 rounded-lg bg-black/50 font-black text-white sm:py-4 sm:px-2",
 }
 
 export default styles

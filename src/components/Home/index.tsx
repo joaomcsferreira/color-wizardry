@@ -19,7 +19,7 @@ const Home = () => {
           Transforming a single color into infinite hues, begin your colorful
           journey here.
         </p>
-        <Button large link={""}>
+        <Button href="#palettes" large>
           Try It Out Now!
         </Button>
       </div>
